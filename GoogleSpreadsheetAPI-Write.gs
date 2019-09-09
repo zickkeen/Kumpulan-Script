@@ -1,6 +1,6 @@
 function doPost(e) {
-	var ss = SpreadsheetApp.openById("1pKKGTFVN4L-onBzmJqk4gmVI4rTFEW17IZr4El1OgVs");
-    var sheet = ss.getSheetByName("link");
+	var ss = SpreadsheetApp.openById("#ID_GOOGLE_SPREADSHEET#");
+    var sheet = ss.getSheetByName("SHEET_NAME_GOOGLE_SS");
 	var action = e.parameter.action;
 
 	switch(action){
@@ -26,5 +26,4 @@ function insert_data(request, sheet){
 	);
 	
 	return ContentService.createTextOutput(hasil).setMimeType(ContentService.MimeType.JSON);
-
 }
